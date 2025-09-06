@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --cor-primaria: #67bce9;
+    --cor-primaria-escura: #305a7e;
+    --cor-secundaria: #ca8a04;
+    --texto-escuro: #1f2937;
+    --texto-claro: #6b7280; 
+    --extra-clara: #faf5ff;
+    --max-width: 1200px;
+}
+
+*{
+    
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+html,body{
+    font-family: "Poppins", sans-serif;
+    height: auto;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 99;
+}
+
+.contuedoNav{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    transition: .3s;
+}
+
+nav .logo a:hover{
+    color: var(--cor-primaria-escura);
+}
+
+nav .checkbox{
+    display: none;
+}
+
+nav input{
+    display: none;
+}
+
+nav .checkbox i{
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    cursor: pointer;           
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a{
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--texto-escuro);
+    transition: 0.3s;
+}
+
+ul li a:hover{
+    border-top-color: var(--cor-secundaria);
+    border-bottom: var(--cor-secundaria);
+    color: var(--cor-secundaria);
+}
+
+section{
+    background: var(--extra-clara);
+}
+
+.sectionContainer{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtittulo{
+    letter-spacing: 2px;
+    color: var(--extra-clara);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.titulo{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--texto-escuro);
+    margin-bottom: 1rem;
+}
+
+.titulo span{
+    font-weight: 600;
+}
+
+.descricao{
+    line-height: 1.5rem;
+    color: var(--texto-claro);
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.botaoAcao{
+    display: flex;
+    gap: 1rem;
+}
+
+.botaoAcao button{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.meContate{
+    background: var(--cor-primaria);
+    color: #ffffff;
+}
+
+.meContate:hover{
+    background: transparent;
+    color: var(--texto-escuro);
+}
+
+.portifolio{
+    color: var(--cor-primaria);
+}
+
+.portifolio:hover{
+    color: #ffffff;
+    background: var(--cor-primaria-escura);
+}
+
+.image{
+    display: grid;
+    place-items: center;
+}
+
+.image img{
+    width: min(25rem, 90%);
+    border-radius: 100%;
+}
+
+@media (width < 750px) {
+    nav .checkbox{
+        display: block;
+    }
+
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background: var(--extra-clara);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+
+    ul li a{
+        font-size: 1.25rem;
+    }
+
+    .sectionContainer{
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image{
+        grid-area: 1/1/2/2;
+    }
+
+    .botaoAcao{
+        margin: auto;
+    }
+}
